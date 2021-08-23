@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TestMVC.Models.GuestResponse> 
+
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>title</title>
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+	<div class ="panel-body">
+		<table class="table table-sm table-striped table-bordered">
+			<thead>
+			<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+			</tr>
+			</thead>
+			<tbody>
+			@foreach (TestMVC.Models.GuestResponse guest in Model)
+			{
+				<tr>
+					<td>@guest.Name</td>
+					<td>@guest.Email</td>
+					<td>@guest.Phone</td>
+				</tr>
+			}
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

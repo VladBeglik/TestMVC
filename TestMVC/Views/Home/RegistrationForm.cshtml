@@ -1,0 +1,48 @@
+﻿@model TestMVC.Models.GuestResponse
+
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+	<div class="panel panel-success">
+		<div class="panel-heading text-center">
+			<div class="panel-body">
+				<form class="p-a-1" asp-action="RegistrationForm" method="post">
+					<div asp-validation-summary="All"></div>
+					<div class="form-group">
+						<label asp-for="Name">Your name: </label>
+						<input class="form-control" asp-for="Name" />
+					</div>
+					<div class="form-group">
+						<label asp-for="Email">Your Email: </label>
+						<input class="form-control" asp-for="Email" />
+					</div>
+					<div class="form-group">
+						<label asp-for="Phone">Your Phone: </label>
+						<input class="form-control" asp-for="Phone" />
+					</div>
+					<div class="form-group">
+						<select class="form-control" asp-for="WillAttend">
+							<option value="">Choose an options</option>
+							<option value="true">yes, i ll be there</option>
+							<option value="false">No, i can t come</option>
+						</select>
+					</div>
+					<div class="text-center">
+						<button class="btn btn-primary" type="submit">Submit</button>
+					</div>
+					
+				</form>
+				<a asp-action="Index">to MyView</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
